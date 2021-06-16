@@ -19,8 +19,9 @@ class PhotoListInteractor: PhotoListBusinessLogic, PhotoListDataStore {
             page: request.page)
             .subscribe { [weak self] resp in
                 self?.handleGetPhotoResponse(resp: resp)
-            } onError: { error in
-                print(error)
+            } onError: { [weak self] error in
+                let serviceError = (error as? ServiceError) ?? ServiceError(.unknownError)
+                self?.presenter?.presentError(error: serviceError)
             }
             .disposed(by: disposeBag)
     }

@@ -2,6 +2,7 @@ import UIKit
 
 protocol PhotoListPresentationLogic {
     func presentPhoto(response: PhotoList.GetPhoto.Response)
+    func presentError(error: ServiceError)
 }
 
 class PhotoListPresenter: PhotoListPresentationLogic {
@@ -23,5 +24,9 @@ class PhotoListPresenter: PhotoListPresentationLogic {
             }) ?? []
         let viewModel = PhotoList.GetPhoto.ViewModel(photoList: photoDisplayList)
         viewController?.displayPhoto(viewModel: viewModel)
+    }
+    
+    func presentError(error: ServiceError) {
+        
     }
 }

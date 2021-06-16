@@ -4,6 +4,7 @@ import RxCocoa
 
 protocol PhotoListDisplayLogic: class {
     func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel)
+    func displayError(error: ServiceError)
 }
 
 class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
@@ -64,6 +65,10 @@ class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
         self.photoDisplayList = viewModel.photoList
         self.tableView.reloadData()
         refreshControl.endRefreshing()
+    }
+    
+    func displayError(error: ServiceError) {
+        
     }
 }
 
