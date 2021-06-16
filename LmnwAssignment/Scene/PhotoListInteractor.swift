@@ -17,11 +17,16 @@ class PhotoListInteractor: PhotoListBusinessLogic, PhotoListDataStore {
         getPhotoService.executeService(
             feature: request.feature,
             page: request.page)
-            .subscribe { response in
-                print(response)
+            .subscribe { [weak self] resp in
+                self?.handleGetPhotoResponse(resp: resp)
             } onError: { error in
                 print(error)
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func handleGetPhotoResponse(resp: PhotoResponse) {
+        let response = PhotoList.GetPhoto.Response(photoResp: resp)
+        self.presenter?.presentPhoto(response: response)
     }
 }

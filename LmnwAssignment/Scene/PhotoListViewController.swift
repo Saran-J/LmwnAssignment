@@ -1,9 +1,12 @@
 import UIKit
 
 protocol PhotoListDisplayLogic: class {
+    func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel)
 }
 
 class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
+    
+    
     var interactor: PhotoListBusinessLogic?
     var router: (NSObjectProtocol & PhotoListRoutingLogic & PhotoListDataPassing)?
     
@@ -32,5 +35,8 @@ class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel) {
     }
 }

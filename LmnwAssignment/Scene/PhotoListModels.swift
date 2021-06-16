@@ -7,7 +7,7 @@ enum PhotoList {
             var feature: String
         }
         struct Response {
-            var photoResp: PhotoResponse?
+            var photoResp: PhotoResponse
         }
         struct ViewModel {
             var photoList: [PhotoDisplay]
@@ -17,6 +17,6 @@ enum PhotoList {
 
 struct PhotoDisplay {
     let imageUrl: String
-    let positiveVotes: Int
+    let positiveVotes: String
     let description: String
 }
