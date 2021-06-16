@@ -161,6 +161,22 @@
 			path = mock;
 			sourceTree = "<group>";
 		};
+		0F7AEEBF267A8E6800D77591 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0F7AEE8C267A7EB200D77591 /* PhotoList */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0F7AEEC0267A8E6F00D77591 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0F7AEE7F267A7CF100D77591 /* NumberFormatComponentTest.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0FC29FF0267A513600ED8A5D /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,8 +273,8 @@
 		0FF8C377267A452100E420C2 /* LmnwAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F7AEE8C267A7EB200D77591 /* PhotoList */,
-				0F7AEE7F267A7CF100D77591 /* NumberFormatComponentTest.swift */,
+				0F7AEEC0267A8E6F00D77591 /* Components */,
+				0F7AEEBF267A8E6800D77591 /* Scene */,
 				0FF8C37A267A452100E420C2 /* Info.plist */,
 			);
 			path = LmnwAssignmentTests;
