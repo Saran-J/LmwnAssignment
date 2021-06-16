@@ -1,7 +1,7 @@
 import UIKit
 
 enum PhotoList {
-    enum getPhoto {
+    enum GetPhoto {
         struct Request {
             var page: Int
             var feature: String
