@@ -12,7 +12,7 @@ class StubGetPhotoService: GetPhotoService {
     override func executeService(feature: String, page: Int) -> Observable<PhotoResponse> {
         switch result {
         case .success:
-            let response = PhotoResponse(photos: [])
+            let response = PhotoResponse(currentPage: 0, totalPage: 0, photos: [])
             return .just(response)
         case .failure(let error):
             return .error(error)

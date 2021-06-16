@@ -3,7 +3,7 @@ import UIKit
 enum PhotoList {
     enum GetPhoto {
         struct Request {
-            var page: Int
+            var isRefresh: Bool
             var feature: String
         }
         struct Response {
@@ -11,6 +11,7 @@ enum PhotoList {
         }
         struct ViewModel {
             var photoList: [PhotoDisplay]
+            var isLastPage: Bool
         }
     }
 }

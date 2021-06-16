@@ -18,7 +18,7 @@ class PhotoListInteractorTest: XCTestCase {
         let presenter = SpyPhotoListPresenter()
         interactor.presenter = presenter
         
-        let request = PhotoList.GetPhoto.Request(page: 1, feature: "")
+        let request = PhotoList.GetPhoto.Request(isRefresh: true, feature: "")
         interactor.getPhoto(request: request)
         XCTAssertEqual(true, presenter.presentPhotoCalled)
     }
@@ -31,7 +31,7 @@ class PhotoListInteractorTest: XCTestCase {
         let presenter = SpyPhotoListPresenter()
         interactor.presenter = presenter
         
-        let request = PhotoList.GetPhoto.Request(page: 1, feature: "")
+        let request = PhotoList.GetPhoto.Request(isRefresh: true, feature: "")
         interactor.getPhoto(request: request)
         XCTAssertEqual(true, presenter.presentErrorCalled)
     }
@@ -44,7 +44,7 @@ class PhotoListInteractorTest: XCTestCase {
         let presenter = SpyPhotoListPresenter()
         interactor.presenter = presenter
         
-        let request = PhotoList.GetPhoto.Request(page: 1, feature: "")
+        let request = PhotoList.GetPhoto.Request(isRefresh: true, feature: "")
         interactor.getPhoto(request: request)
         XCTAssertEqual(true, presenter.presentErrorCalled)
     }

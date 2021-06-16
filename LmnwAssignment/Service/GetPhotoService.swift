@@ -3,7 +3,15 @@ import Moya
 import RxSwift
 
 struct PhotoResponse: Codable {
+    var currentPage: Int
+    var totalPage: Int
     var photos: [PhotoItem]?
+    
+    enum CodingKeys: String, CodingKey {
+        case currentPage = "current_page"
+        case totalPage = "total_pages"
+        case photos = "photos"
+    }
 }
 
 struct PhotoItem: Codable {

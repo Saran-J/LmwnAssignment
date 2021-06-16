@@ -12,11 +12,17 @@ class PhotoListInteractor: PhotoListBusinessLogic, PhotoListDataStore {
     var presenter: PhotoListPresentationLogic?
     var getPhotoService = GetPhotoService()
     var disposeBag = DisposeBag()
+    var page = 1
     
     func getPhoto(request: PhotoList.GetPhoto.Request) {
+        if request.isRefresh {
+            page = 0
+        }
+        page += 1
+        
         getPhotoService.executeService(
             feature: request.feature,
-            page: request.page)
+            page: page)
             .subscribe { [weak self] resp in
                 self?.handleGetPhotoResponse(resp: resp)
             } onError: { [weak self] error in

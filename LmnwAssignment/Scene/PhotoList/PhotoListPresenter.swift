@@ -22,7 +22,9 @@ class PhotoListPresenter: PhotoListPresentationLogic {
                     description: item.description)
                 return photoDisplay
             }) ?? []
-        let viewModel = PhotoList.GetPhoto.ViewModel(photoList: photoDisplayList)
+        let viewModel = PhotoList.GetPhoto.ViewModel(
+            photoList: photoDisplayList,
+            isLastPage: response.photoResp.currentPage == response.photoResp.totalPage)
         viewController?.displayPhoto(viewModel: viewModel)
     }
     

@@ -9,7 +9,10 @@ class MockGetPhotoResponse: NSObject {
             imageUrl: ["bbb", "cccc"],
             description: "ddddd",
             positiveVotesCount: 1000)
-        let response = PhotoResponse(photos: [photoItem])
+        let response = PhotoResponse(
+            currentPage: 0,
+            totalPage: 0,
+            photos: [photoItem])
         return response
     }
     
@@ -20,12 +23,18 @@ class MockGetPhotoResponse: NSObject {
             imageUrl: [],
             description: "ddddd",
             positiveVotesCount: 1000)
-        let response = PhotoResponse(photos: [photoItem])
+        let response = PhotoResponse(
+            currentPage: 0,
+            totalPage: 0,
+            photos: [photoItem])
         return response
     }
     
     static func getMockWithResultNil() -> PhotoResponse {
-        let response = PhotoResponse(photos: nil)
+        let response = PhotoResponse(
+            currentPage: 0,
+            totalPage: 0,
+            photos: nil)
         return response
     }
 }

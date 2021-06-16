@@ -12,6 +12,7 @@ class PhotoListViewController: BaseViewController, PhotoListDisplayLogic {
     var router: (NSObjectProtocol & PhotoListRoutingLogic & PhotoListDataPassing)?
     
     var photoDisplayList: [PhotoDisplay] = []
+    var isLastPage = false
     var refreshControl = UIRefreshControl()
     var disposeBag = DisposeBag()
     
@@ -43,28 +44,33 @@ class PhotoListViewController: BaseViewController, PhotoListDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        getPhoto()
+        getPhoto(isRefresh: true)
     }
     
     func setupTableView() {
         refreshControl.attributedTitle = NSAttributedString(string: "Refresh")
         refreshControl.rx.controlEvent(.valueChanged)
             .bind { [weak self] _ in
-                self?.getPhoto()
+                self?.getPhoto(isRefresh: true)
             }
         .disposed(by: disposeBag)
         tableView.addSubview(refreshControl)
     }
     
-    func getPhoto() {
-        let request = PhotoList.GetPhoto.Request(page: 1, feature: "popular")
+    func getPhoto(isRefresh: Bool) {
+        let request = PhotoList.GetPhoto.Request(
+            isRefresh: isRefresh,
+            feature: "popular")
         interactor?.getPhoto(request: request)
     }
     
     func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel) {
-        self.photoDisplayList = viewModel.photoList
+        if refreshControl.isRefreshing {
+            self.photoDisplayList = []
+            refreshControl.endRefreshing()
+        }
+        self.photoDisplayList.append(contentsOf: viewModel.photoList)
         self.tableView.reloadData()
-        refreshControl.endRefreshing()
     }
     
     func displayError(error: ServiceError) {
@@ -87,6 +93,11 @@ extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.setupCellData(data: self.photoDisplayList[indexPath.row])
+        
+        if indexPath.row == photoDisplayList.count - 1 && !isLastPage {
+            print("photoList Count",photoDisplayList.count)
+            getPhoto(isRefresh: false)
+        }
         return cell
     }
 }
