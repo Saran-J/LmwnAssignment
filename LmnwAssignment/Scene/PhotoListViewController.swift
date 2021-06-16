@@ -1,4 +1,6 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol PhotoListDisplayLogic: class {
     func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel)
@@ -7,6 +9,12 @@ protocol PhotoListDisplayLogic: class {
 class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
     var interactor: PhotoListBusinessLogic?
     var router: (NSObjectProtocol & PhotoListRoutingLogic & PhotoListDataPassing)?
+    
+    var photoDisplayList: [PhotoDisplay] = []
+    var refreshControl = UIRefreshControl()
+    var disposeBag = DisposeBag()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -33,8 +41,43 @@ class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        getPhoto()
+    }
+    
+    func setupTableView() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh")
+        refreshControl.rx.controlEvent(.valueChanged)
+            .bind { [weak self] _ in
+                self?.getPhoto()
+            }
+        .disposed(by: disposeBag)
+        tableView.addSubview(refreshControl)
+    }
+    
+    func getPhoto() {
+        let request = PhotoList.GetPhoto.Request(page: 1, feature: "popular")
+        interactor?.getPhoto(request: request)
     }
     
     func displayPhoto(viewModel: PhotoList.GetPhoto.ViewModel) {
+        self.photoDisplayList = viewModel.photoList
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+}
+
+extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.photoDisplayList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "photoCell") as? PhotoCell else {
+            return UITableViewCell()
+        }
+        cell.setupCellData(data: self.photoDisplayList[indexPath.row])
+        return cell
     }
 }
