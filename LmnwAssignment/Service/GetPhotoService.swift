@@ -8,12 +8,14 @@ struct PhotoResponse: Codable {
 
 struct PhotoItem: Codable {
     var id: Int
+    var name: String
     var imageUrl: [String]
     var description: String
     var positiveVotesCount: Int
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
+        case name = "name"
         case imageUrl = "image_url"
         case description = "description"
         case positiveVotesCount = "positive_votes_count"
