@@ -11,6 +11,13 @@ struct PhotoItem: Codable {
     var imageUrl: [String]
     var description: String
     var positiveVotesCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case imageUrl = "image_url"
+        case description = "description"
+        case positiveVotesCount = "positive_votes_count"
+    }
 }
 
 class GetPhotoService: BaseService<PhotoProvider, PhotoResponse> {
