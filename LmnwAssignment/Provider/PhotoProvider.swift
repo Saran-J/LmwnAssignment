@@ -28,7 +28,7 @@ extension PhotoProvider: TargetType {
         switch self {
         case let .getPhoto(feature, page):
             return .requestParameters(
-                parameters: ["feature": feature, "page": page],
+                parameters: ["feature": feature, "page": page, "rpp": 10],
                 encoding: URLEncoding.queryString)
         }
     }
