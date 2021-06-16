@@ -12,8 +12,6 @@
 		0FF8C369267A451F00E420C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8C367267A451F00E420C2 /* Main.storyboard */; };
 		0FF8C36B267A452100E420C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8C36A267A452100E420C2 /* Assets.xcassets */; };
 		0FF8C36E267A452100E420C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8C36C267A452100E420C2 /* LaunchScreen.storyboard */; };
-		0FF8C379267A452100E420C2 /* LmnwAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C378267A452100E420C2 /* LmnwAssignmentTests.swift */; };
-		0FF8C384267A452100E420C2 /* LmnwAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C383267A452100E420C2 /* LmnwAssignmentUITests.swift */; };
 		1BA6AB1E123BB5FF4B6901A5 /* Pods_LmnwAssignment_LmnwAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0392F9B74D13E90BCF10FE9E /* Pods_LmnwAssignment_LmnwAssignmentUITests.framework */; };
 		8F4F5189755F63B3473C488E /* Pods_LmnwAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730B51A917EEF3F5BCCFE289 /* Pods_LmnwAssignmentTests.framework */; };
 		D072C524E5D6256004BBDCE5 /* Pods_LmnwAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C1A095251D498BD2BAF9DF /* Pods_LmnwAssignment.framework */; };
@@ -46,10 +44,8 @@
 		0FF8C36D267A452100E420C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF8C36F267A452100E420C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF8C374267A452100E420C2 /* LmnwAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LmnwAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF8C378267A452100E420C2 /* LmnwAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LmnwAssignmentTests.swift; sourceTree = "<group>"; };
 		0FF8C37A267A452100E420C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF8C37F267A452100E420C2 /* LmnwAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LmnwAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF8C383267A452100E420C2 /* LmnwAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LmnwAssignmentUITests.swift; sourceTree = "<group>"; };
 		0FF8C385267A452100E420C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C4824636B2FF57C569CDE1A /* Pods-LmnwAssignment-LmnwAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LmnwAssignment-LmnwAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-LmnwAssignment-LmnwAssignmentUITests/Pods-LmnwAssignment-LmnwAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		333CEA1B33104AB5E680D1DE /* Pods-LmnwAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LmnwAssignment.release.xcconfig"; path = "Target Support Files/Pods-LmnwAssignment/Pods-LmnwAssignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 		0FF8C377267A452100E420C2 /* LmnwAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FF8C378267A452100E420C2 /* LmnwAssignmentTests.swift */,
 				0FF8C37A267A452100E420C2 /* Info.plist */,
 			);
 			path = LmnwAssignmentTests;
@@ -136,7 +131,6 @@
 		0FF8C382267A452100E420C2 /* LmnwAssignmentUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0FF8C383267A452100E420C2 /* LmnwAssignmentUITests.swift */,
 				0FF8C385267A452100E420C2 /* Info.plist */,
 			);
 			path = LmnwAssignmentUITests;
@@ -431,7 +425,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF8C379267A452100E420C2 /* LmnwAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +432,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF8C384267A452100E420C2 /* LmnwAssignmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
