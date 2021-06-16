@@ -127,13 +127,7 @@
 		0FC29FFF267A53A900ED8A5D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				0FC2A030267A6D3900ED8A5D /* tableViewCell */,
-				0FC2A010267A55F200ED8A5D /* PhotoListPresenter.swift */,
-				0FC2A012267A55F200ED8A5D /* PhotoListRouter.swift */,
-				0FC2A013267A55F200ED8A5D /* PhotoListModels.swift */,
-				0FC2A014267A55F200ED8A5D /* PhotoListViewController.swift */,
-				0FC2A015267A55F200ED8A5D /* PhotoListInteractor.swift */,
-				0FC2A022267A5A6D00ED8A5D /* PhotoList.storyboard */,
+				0FC2A039267A782800ED8A5D /* PhotoList */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -152,6 +146,20 @@
 				0FC2A031267A6D5500ED8A5D /* PhotoCell.swift */,
 			);
 			path = tableViewCell;
+			sourceTree = "<group>";
+		};
+		0FC2A039267A782800ED8A5D /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				0FC2A030267A6D3900ED8A5D /* tableViewCell */,
+				0FC2A013267A55F200ED8A5D /* PhotoListModels.swift */,
+				0FC2A010267A55F200ED8A5D /* PhotoListPresenter.swift */,
+				0FC2A012267A55F200ED8A5D /* PhotoListRouter.swift */,
+				0FC2A014267A55F200ED8A5D /* PhotoListViewController.swift */,
+				0FC2A015267A55F200ED8A5D /* PhotoListInteractor.swift */,
+				0FC2A022267A5A6D00ED8A5D /* PhotoList.storyboard */,
+			);
+			path = PhotoList;
 			sourceTree = "<group>";
 		};
 		0FF8C355267A451F00E420C2 = {
