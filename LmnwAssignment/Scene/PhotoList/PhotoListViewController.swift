@@ -7,7 +7,7 @@ protocol PhotoListDisplayLogic: class {
     func displayError(error: ServiceError)
 }
 
-class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
+class PhotoListViewController: BaseViewController, PhotoListDisplayLogic {
     var interactor: PhotoListBusinessLogic?
     var router: (NSObjectProtocol & PhotoListRoutingLogic & PhotoListDataPassing)?
     
@@ -68,6 +68,11 @@ class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
     }
     
     func displayError(error: ServiceError) {
+        refreshControl.endRefreshing()
+        self.displayMessage(
+            title: error.getTitle(),
+            message: error.getMessage()
+        )
     }
 }
 
