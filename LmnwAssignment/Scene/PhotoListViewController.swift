@@ -68,7 +68,6 @@ class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
     }
     
     func displayError(error: ServiceError) {
-        
     }
 }
 

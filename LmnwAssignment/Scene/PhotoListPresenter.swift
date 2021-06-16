@@ -27,6 +27,6 @@ class PhotoListPresenter: PhotoListPresentationLogic {
     }
     
     func presentError(error: ServiceError) {
-        
+        self.viewController?.displayError(error: error)
     }
 }
