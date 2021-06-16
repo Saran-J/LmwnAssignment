@@ -16,6 +16,7 @@ enum PhotoList {
 }
 
 struct PhotoDisplay {
+    let name: String
     let imageUrl: String
     let positiveVotes: String
     let description: String

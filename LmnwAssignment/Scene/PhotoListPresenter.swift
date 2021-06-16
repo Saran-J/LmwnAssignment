@@ -15,6 +15,7 @@ class PhotoListPresenter: PhotoListPresentationLogic {
                     number: item.positiveVotesCount)
                 
                 let photoDisplay = PhotoDisplay(
+                    name: item.name,
                     imageUrl: item.imageUrl.first ?? "",
                     positiveVotes: voteCountDisplay,
                     description: item.description)
