@@ -13,6 +13,9 @@
 		0F7AEE98267A7F3600D77591 /* SpyPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */; };
 		0F7AEEA0267A7FD800D77591 /* StubGetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE9F267A7FD800D77591 /* StubGetPhotoService.swift */; };
 		0F7AEEA5267A807B00D77591 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEEA4267A807B00D77591 /* Common.swift */; };
+		0F7AEEAD267A88D000D77591 /* PhotoListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEEAC267A88D000D77591 /* PhotoListInteractorTest.swift */; };
+		0F7AEEB2267A8AD600D77591 /* PhotoListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEEB1267A8AD600D77591 /* PhotoListPresenterTest.swift */; };
+		0F7AEEB8267A8C1100D77591 /* MockGetPhotoRespoonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEEB7267A8C1100D77591 /* MockGetPhotoRespoonse.swift */; };
 		0FC29FF2267A515F00ED8A5D /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC29FF1267A515F00ED8A5D /* BaseService.swift */; };
 		0FC29FF8267A51C600ED8A5D /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC29FF7267A51C600ED8A5D /* PhotoProvider.swift */; };
 		0FC2A001267A53BF00ED8A5D /* GetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2A000267A53BF00ED8A5D /* GetPhotoService.swift */; };
@@ -58,6 +61,9 @@
 		0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPhotoListViewController.swift; sourceTree = "<group>"; };
 		0F7AEE9F267A7FD800D77591 /* StubGetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGetPhotoService.swift; sourceTree = "<group>"; };
 		0F7AEEA4267A807B00D77591 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		0F7AEEAC267A88D000D77591 /* PhotoListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListInteractorTest.swift; sourceTree = "<group>"; };
+		0F7AEEB1267A8AD600D77591 /* PhotoListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListPresenterTest.swift; sourceTree = "<group>"; };
+		0F7AEEB7267A8C1100D77591 /* MockGetPhotoRespoonse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetPhotoRespoonse.swift; sourceTree = "<group>"; };
 		0FC29FF1267A515F00ED8A5D /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		0FC29FF7267A51C600ED8A5D /* PhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
 		0FC2A000267A53BF00ED8A5D /* GetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotoService.swift; sourceTree = "<group>"; };
@@ -120,8 +126,11 @@
 		0F7AEE8C267A7EB200D77591 /* PhotoList */ = {
 			isa = PBXGroup;
 			children = (
+				0F7AEEB6267A8C0200D77591 /* mock */,
 				0F7AEE8E267A7ECC00D77591 /* spy */,
 				0F7AEE8D267A7EC800D77591 /* stub */,
+				0F7AEEAC267A88D000D77591 /* PhotoListInteractorTest.swift */,
+				0F7AEEB1267A8AD600D77591 /* PhotoListPresenterTest.swift */,
 			);
 			path = PhotoList;
 			sourceTree = "<group>";
@@ -142,6 +151,14 @@
 				0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */,
 			);
 			path = spy;
+			sourceTree = "<group>";
+		};
+		0F7AEEB6267A8C0200D77591 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				0F7AEEB7267A8C1100D77591 /* MockGetPhotoRespoonse.swift */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		0FC29FF0267A513600ED8A5D /* Service */ = {
@@ -557,9 +574,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7AEEB8267A8C1100D77591 /* MockGetPhotoRespoonse.swift in Sources */,
 				0F7AEE98267A7F3600D77591 /* SpyPhotoListViewController.swift in Sources */,
 				0F7AEEA0267A7FD800D77591 /* StubGetPhotoService.swift in Sources */,
 				0F7AEE90267A7EE100D77591 /* SpyPhotoListPresenter.swift in Sources */,
+				0F7AEEB2267A8AD600D77591 /* PhotoListPresenterTest.swift in Sources */,
+				0F7AEEAD267A88D000D77591 /* PhotoListInteractorTest.swift in Sources */,
 				0F7AEEA5267A807B00D77591 /* Common.swift in Sources */,
 				0F7AEE80267A7CF100D77591 /* NumberFormatComponentTest.swift in Sources */,
 			);
