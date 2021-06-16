@@ -5,8 +5,6 @@ protocol PhotoListDisplayLogic: class {
 }
 
 class PhotoListViewController: UIViewController, PhotoListDisplayLogic {
-    
-    
     var interactor: PhotoListBusinessLogic?
     var router: (NSObjectProtocol & PhotoListRoutingLogic & PhotoListDataPassing)?
     
