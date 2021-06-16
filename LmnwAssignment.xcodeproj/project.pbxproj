@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F7AEE80267A7CF100D77591 /* NumberFormatComponentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE7F267A7CF100D77591 /* NumberFormatComponentTest.swift */; };
+		0F7AEE88267A7DE500D77591 /* LmnwAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE87267A7DE500D77591 /* LmnwAssignmentUITests.swift */; };
+		0F7AEE90267A7EE100D77591 /* SpyPhotoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE8F267A7EE100D77591 /* SpyPhotoListPresenter.swift */; };
+		0F7AEE98267A7F3600D77591 /* SpyPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */; };
 		0FC29FF2267A515F00ED8A5D /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC29FF1267A515F00ED8A5D /* BaseService.swift */; };
 		0FC29FF8267A51C600ED8A5D /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC29FF7267A51C600ED8A5D /* PhotoProvider.swift */; };
 		0FC2A001267A53BF00ED8A5D /* GetPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2A000267A53BF00ED8A5D /* GetPhotoService.swift */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		0392F9B74D13E90BCF10FE9E /* Pods_LmnwAssignment_LmnwAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LmnwAssignment_LmnwAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7AEE7F267A7CF100D77591 /* NumberFormatComponentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatComponentTest.swift; sourceTree = "<group>"; };
+		0F7AEE87267A7DE500D77591 /* LmnwAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LmnwAssignmentUITests.swift; sourceTree = "<group>"; };
+		0F7AEE8F267A7EE100D77591 /* SpyPhotoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPhotoListPresenter.swift; sourceTree = "<group>"; };
+		0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPhotoListViewController.swift; sourceTree = "<group>"; };
 		0FC29FF1267A515F00ED8A5D /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		0FC29FF7267A51C600ED8A5D /* PhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
 		0FC2A000267A53BF00ED8A5D /* GetPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotoService.swift; sourceTree = "<group>"; };
@@ -105,6 +113,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7AEE8C267A7EB200D77591 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				0F7AEE8E267A7ECC00D77591 /* spy */,
+				0F7AEE8D267A7EC800D77591 /* stub */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		0F7AEE8D267A7EC800D77591 /* stub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stub;
+			sourceTree = "<group>";
+		};
+		0F7AEE8E267A7ECC00D77591 /* spy */ = {
+			isa = PBXGroup;
+			children = (
+				0F7AEE8F267A7EE100D77591 /* SpyPhotoListPresenter.swift */,
+				0F7AEE97267A7F3600D77591 /* SpyPhotoListViewController.swift */,
+			);
+			path = spy;
+			sourceTree = "<group>";
+		};
 		0FC29FF0267A513600ED8A5D /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +234,8 @@
 		0FF8C377267A452100E420C2 /* LmnwAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				0F7AEE8C267A7EB200D77591 /* PhotoList */,
+				0F7AEE7F267A7CF100D77591 /* NumberFormatComponentTest.swift */,
 				0FF8C37A267A452100E420C2 /* Info.plist */,
 			);
 			path = LmnwAssignmentTests;
@@ -210,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				0FF8C385267A452100E420C2 /* Info.plist */,
+				0F7AEE87267A7DE500D77591 /* LmnwAssignmentUITests.swift */,
 			);
 			path = LmnwAssignmentUITests;
 			sourceTree = "<group>";
@@ -313,10 +349,12 @@
 					};
 					0FF8C373267A452100E420C2 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 0FF8C35D267A451F00E420C2;
 					};
 					0FF8C37E267A452100E420C2 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 0FF8C35D267A451F00E420C2;
 					};
 				};
@@ -513,6 +551,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7AEE98267A7F3600D77591 /* SpyPhotoListViewController.swift in Sources */,
+				0F7AEE90267A7EE100D77591 /* SpyPhotoListPresenter.swift in Sources */,
+				0F7AEE80267A7CF100D77591 /* NumberFormatComponentTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7AEE88267A7DE500D77591 /* LmnwAssignmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +754,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2CXQAZL4J;
 				INFOPLIST_FILE = LmnwAssignmentTests/Info.plist;
@@ -723,6 +766,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mira.LmnwAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LmnwAssignment.app/LmnwAssignment";
@@ -735,6 +779,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2CXQAZL4J;
 				INFOPLIST_FILE = LmnwAssignmentTests/Info.plist;
@@ -757,6 +802,7 @@
 			baseConfigurationReference = 1C4824636B2FF57C569CDE1A /* Pods-LmnwAssignment-LmnwAssignmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2CXQAZL4J;
 				INFOPLIST_FILE = LmnwAssignmentUITests/Info.plist;
@@ -767,6 +813,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mira.LmnwAssignmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LmnwAssignment;
@@ -778,6 +825,7 @@
 			baseConfigurationReference = 858D4AC28D50FD7EFF78D552 /* Pods-LmnwAssignment-LmnwAssignmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2CXQAZL4J;
 				INFOPLIST_FILE = LmnwAssignmentUITests/Info.plist;
