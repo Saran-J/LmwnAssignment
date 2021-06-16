@@ -16,6 +16,7 @@
 		0FC2A01A267A55F200ED8A5D /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2A014267A55F200ED8A5D /* PhotoListViewController.swift */; };
 		0FC2A01B267A55F200ED8A5D /* PhotoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2A015267A55F200ED8A5D /* PhotoListInteractor.swift */; };
 		0FC2A023267A5A6D00ED8A5D /* PhotoList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC2A022267A5A6D00ED8A5D /* PhotoList.storyboard */; };
+		0FC2A029267A5E6C00ED8A5D /* NumberFormatComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2A028267A5E6C00ED8A5D /* NumberFormatComponent.swift */; };
 		0FF8C362267A451F00E420C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C361267A451F00E420C2 /* AppDelegate.swift */; };
 		0FF8C366267A451F00E420C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8C365267A451F00E420C2 /* ViewController.swift */; };
 		0FF8C369267A451F00E420C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8C367267A451F00E420C2 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		0FC2A014267A55F200ED8A5D /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		0FC2A015267A55F200ED8A5D /* PhotoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListInteractor.swift; sourceTree = "<group>"; };
 		0FC2A022267A5A6D00ED8A5D /* PhotoList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhotoList.storyboard; sourceTree = "<group>"; };
+		0FC2A028267A5E6C00ED8A5D /* NumberFormatComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatComponent.swift; sourceTree = "<group>"; };
 		0FF8C35E267A451F00E420C2 /* LmnwAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LmnwAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF8C361267A451F00E420C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF8C365267A451F00E420C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		0FC2A027267A5E5200ED8A5D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0FC2A028267A5E6C00ED8A5D /* NumberFormatComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0FF8C355267A451F00E420C2 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +168,7 @@
 		0FF8C360267A451F00E420C2 /* LmnwAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				0FC2A027267A5E5200ED8A5D /* Components */,
 				0FC29FF6267A51A100ED8A5D /* Provider */,
 				0FC29FF0267A513600ED8A5D /* Service */,
 				0FC29FFF267A53A900ED8A5D /* Scene */,
@@ -470,6 +481,7 @@
 			files = (
 				0FC2A001267A53BF00ED8A5D /* GetPhotoService.swift in Sources */,
 				0FF8C366267A451F00E420C2 /* ViewController.swift in Sources */,
+				0FC2A029267A5E6C00ED8A5D /* NumberFormatComponent.swift in Sources */,
 				0FF8C362267A451F00E420C2 /* AppDelegate.swift in Sources */,
 				0FC2A016267A55F200ED8A5D /* PhotoListPresenter.swift in Sources */,
 				0FC2A01A267A55F200ED8A5D /* PhotoListViewController.swift in Sources */,
