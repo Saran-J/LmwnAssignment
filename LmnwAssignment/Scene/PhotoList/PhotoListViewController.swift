@@ -15,6 +15,7 @@ class PhotoListViewController: BaseViewController, PhotoListDisplayLogic {
     var isLastPage = false
     var refreshControl = UIRefreshControl()
     var disposeBag = DisposeBag()
+    var splitInsertionIndex = 4
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -85,19 +86,42 @@ class PhotoListViewController: BaseViewController, PhotoListDisplayLogic {
 extension PhotoListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.photoDisplayList.count
+            + (self.photoDisplayList.count / splitInsertionIndex)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "photoCell") as? PhotoCell else {
-            return UITableViewCell()
-        }
-        cell.setupCellData(data: self.photoDisplayList[indexPath.row])
-        
         if indexPath.row == photoDisplayList.count - 1 && !isLastPage {
-            print("photoList Count",photoDisplayList.count)
             getPhoto(isRefresh: false)
         }
+        
+        let useIndex = indexPath.row + 1
+        let splitIndex = splitInsertionIndex + 1
+        
+        let shouldInsertImage = (useIndex % splitIndex == 0)
+            && indexPath.row != 0
+        let countInsertAdded = useIndex / splitIndex
+        
+        if shouldInsertImage {
+            return getInsertionCell(tableView: tableView)
+        }
+        guard let cell = getPhotoCell(tableView: tableView) else {
+            return UITableViewCell()
+        }
+        
+        cell.setupCellData(data: self.photoDisplayList[indexPath.row - countInsertAdded])
         return cell
+    }
+    
+    private func getInsertionCell(tableView: UITableView) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "insertionCell") else {
+            return UITableViewCell()
+        }
+        return cell
+    }
+    
+    private func getPhotoCell(tableView: UITableView) -> PhotoCell? {
+        return tableView.dequeueReusableCell(
+            withIdentifier: "photoCell") as? PhotoCell
     }
 }
